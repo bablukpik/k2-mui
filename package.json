@@ -3,9 +3,10 @@
   "private": true,
   "version": "0.0.0",
   "scripts": {
-    "dev": "vite",
+    "dev": "vite --host",
     "build": "tsc && vite build",
-    "preview": "vite preview",
+    "preview": "vite preview --host",
+    "start": "vite",
     "test": "jest --config jest.config.js --coverage --runInBand --detectOpenHandles --silent --forceExit",
     "test:updateSnapshot": "npm run test -- --updateSnapshot --detectOpenHandles",
     "test:watch": "jest --config jest.config.js --coverage --watchAll",
@@ -14,7 +15,8 @@
     "lint": "eslint \"src/**/*.{jsx,tsx}\" --config ./.eslintrc.js",
     "lint-fix:script": "npm run lint -- --fix",
     "lint:style": "stylelint \"src/**/*.less\"",
-    "lint-fix:style": "npm run lint:style -- --fix"
+    "lint-fix:style": "npm run lint:style -- --fix",
+    "lint:fix": "npm run lint-fix:script && npm run lint-fix:style"
   },
   "dependencies": {
     "@emotion/react": "^11.10.4",

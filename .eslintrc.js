@@ -31,7 +31,7 @@ module.exports = {
     }],
     "array-element-newline": ["error", {
       "ArrayExpression": { "multiline": true, "minItems": 3 }, // array
-      "ArrayPattern": { "multiline": true, "minItems": 2 }, // array destructuring
+      "ArrayPattern": { "multiline": true, "minItems": 3 }, // array destructuring
     }],
     'react/jsx-props-no-spreading': 'off',
     'max-len': ['error', {

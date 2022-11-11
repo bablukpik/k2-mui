@@ -1,8 +1,10 @@
-import { Box, Stack, Skeleton } from "@mui/material";
-import React, { useState } from "react";
-import Post from "./Post";
+import {
+  Box, Stack, Skeleton,
+} from '@mui/material';
+import React, { useState } from 'react';
+import Post from './Post';
 
-const Feed = () => {
+function Feed() {
   const [loading, setLoading] = useState(true);
 
   setTimeout(() => {
@@ -30,6 +32,6 @@ const Feed = () => {
       )}
     </Box>
   );
-};
+}
 
 export default Feed;
