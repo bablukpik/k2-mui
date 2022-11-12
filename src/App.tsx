@@ -1,5 +1,9 @@
 import {
-  Box, createTheme, Stack, ThemeProvider,
+  Box,
+  createTheme,
+  Stack,
+  ThemeProvider,
+  PaletteMode,
 } from '@mui/material';
 import { useState } from 'react';
 import Sidebar from './components/Sidebar';
@@ -9,9 +13,10 @@ import Navbar from './components/Navbar';
 import Add from './components/Add';
 
 function App() {
-  const [mode, setMode] = useState('light');
+  const [mode, setMode] = useState<PaletteMode>('light');
 
   const darkTheme = createTheme({ palette: { mode } });
+
   return (
     <ThemeProvider theme={darkTheme}>
       <Box bgcolor="background.default" color="text.primary">
