@@ -1,6 +1,9 @@
-import { createTheme } from '@mui/material';
+import {
+  PaletteMode,
+  createTheme,
+} from '@mui/material';
 
-const theme = createTheme({
+const theme = (mode: PaletteMode) => createTheme({
   status: { danger: '#e53e3e' },
   palette: {
     primary: {
@@ -9,6 +12,7 @@ const theme = createTheme({
     },
     secondary: { main: '#15c630' },
     otherColor: { main: '#999' },
+    mode: mode || 'light',
   },
 });
 

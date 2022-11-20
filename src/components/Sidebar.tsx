@@ -1,3 +1,4 @@
+import { useContext } from 'react';
 import {
   AccountBox,
   Article,
@@ -17,10 +18,10 @@ import {
   ListItemText,
   Switch,
 } from '@mui/material';
+import { ColorContext } from '../contexts/ColorContext';
 
-function Sidebar({
-  mode, setMode,
-}) {
+function Sidebar() {
+  const { toggleColorMode } = useContext(ColorContext);
   return (
     <Box flex={1} p={2} sx={{ display: { xs: 'none', sm: 'block' } }}>
       <Box position="fixed">
@@ -86,7 +87,7 @@ function Sidebar({
               <ListItemIcon>
                 <ModeNight />
               </ListItemIcon>
-              <Switch onChange={(e) => setMode(mode === 'light' ? 'dark' : 'light')} />
+              <Switch onChange={toggleColorMode} />
             </ListItemButton>
           </ListItem>
         </List>

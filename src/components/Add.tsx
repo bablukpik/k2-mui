@@ -1,15 +1,15 @@
 import {
   Avatar,
+  Box,
   Button,
   ButtonGroup,
   Fab,
   Modal,
   Stack,
-  styled,
   TextField,
   Tooltip,
   Typography,
-  Box,
+  styled,
 } from '@mui/material';
 import { useState } from 'react';
 import {
@@ -59,7 +59,7 @@ function Add() {
       >
         <Box
           width={400}
-          height={280}
+          height={300}
           bgcolor="background.default"
           color="text.primary"
           p={3}
