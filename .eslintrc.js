@@ -98,5 +98,7 @@ module.exports = {
       ignoreUrls: true,
     }],
     'jsx-quotes': ["error", "prefer-double"],
+    "comma-dangle": "off",
+    "@typescript-eslint/comma-dangle": "off"
   },
 };

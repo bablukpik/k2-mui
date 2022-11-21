@@ -14,6 +14,10 @@ const theme = (mode: PaletteMode) => createTheme({
     otherColor: { main: '#999' },
     mode: mode || 'light',
   },
+  typography: {
+    htmlFontSize: 10, // set 1rem equal to 10px instead of default 16px
+    fontSize: 14,
+  },
 });
 
 export default theme;

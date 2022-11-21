@@ -14,8 +14,6 @@ import Feed from './components/Feed';
 import Rightbar from './components/Rightbar';
 import Navbar from './components/Navbar';
 import Add from './components/Add';
-import MyTestComponent from './components/MyTestComponent';
-import { SwitchModeButton } from './components/SwitchModeButton';
 import { ColorContext } from './contexts/ColorContext';
 import theme from './themes/theme';
 
@@ -37,8 +35,6 @@ function App() {
       <ThemeProvider theme={customTheme}>
         <CssBaseline enableColorScheme />
         <Box bgcolor="background.default" color="text.primary">
-          <MyTestComponent />
-          <SwitchModeButton />
           <Navbar />
           <Stack direction="row" spacing={2} justifyContent="space-between">
             <Sidebar />
