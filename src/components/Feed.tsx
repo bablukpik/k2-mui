@@ -1,7 +1,7 @@
-import {
-  Box, Stack, Skeleton,
-} from '@mui/material';
 import React, { useState } from 'react';
+import {
+  Box, Skeleton, Stack,
+} from '@mui/material';
 import Post from './Post';
 
 function Feed() {
@@ -9,7 +9,7 @@ function Feed() {
 
   setTimeout(() => {
     setLoading(false);
-  }, [3000]);
+  }, 3000);
 
   return (
     <Box flex={4} p={{ xs: 0, md: 2 }}>

@@ -1,3 +1,7 @@
+import React, {
+  useMemo,
+  useState,
+} from 'react';
 import {
   Box,
   CssBaseline,
@@ -5,10 +9,6 @@ import {
   Stack,
   ThemeProvider,
 } from '@mui/material';
-import {
-  useMemo,
-  useState,
-} from 'react';
 import Sidebar from './components/Sidebar';
 import Feed from './components/Feed';
 import Rightbar from './components/Rightbar';

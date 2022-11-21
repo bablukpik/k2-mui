@@ -1,3 +1,4 @@
+import React, { useState } from 'react';
 import {
   Mail,
   Notifications,
@@ -15,7 +16,6 @@ import {
   Typography,
   styled,
 } from '@mui/material';
-import { useState } from 'react';
 
 const StyledToolbar = styled(Toolbar)({
   display: 'flex',
