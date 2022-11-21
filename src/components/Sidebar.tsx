@@ -1,3 +1,4 @@
+import React, { useContext } from 'react';
 import {
   AccountBox,
   Article,
@@ -7,7 +8,7 @@ import {
   Person,
   Settings,
   Storefront,
-} from "@mui/icons-material";
+} from '@mui/icons-material';
 import {
   Box,
   List,
@@ -16,12 +17,13 @@ import {
   ListItemIcon,
   ListItemText,
   Switch,
-} from "@mui/material";
-import React from "react";
+} from '@mui/material';
+import { ColorContext } from '../contexts/ColorContext';
 
-const Sidebar = ({mode,setMode}) => {
+function Sidebar() {
+  const { toggleColorMode } = useContext(ColorContext);
   return (
-    <Box flex={1} p={2} sx={{ display: { xs: "none", sm: "block" } }}>
+    <Box flex={1} p={2} sx={{ display: { xs: 'none', sm: 'block' } }}>
       <Box position="fixed">
         <List>
           <ListItem disablePadding>
@@ -85,13 +87,13 @@ const Sidebar = ({mode,setMode}) => {
               <ListItemIcon>
                 <ModeNight />
               </ListItemIcon>
-              <Switch onChange={e=>setMode(mode === "light" ? "dark" : "light")}/>
+              <Switch onChange={toggleColorMode} />
             </ListItemButton>
           </ListItem>
         </List>
       </Box>
     </Box>
   );
-};
+}
 
 export default Sidebar;
