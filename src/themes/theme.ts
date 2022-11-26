@@ -6,12 +6,9 @@ import {
 const theme = (mode: PaletteMode) => createTheme({
   status: { danger: '#e53e3e' },
   palette: {
-    primary: {
-      main: '#1760a5',
-      light: 'skyblue',
-    },
-    secondary: { main: '#15c630' },
-    otherColor: { main: '#999' },
+    primary: { main: '#550065' },
+    secondary: { main: '#f54500' },
+    otherColor: { main: '#1277d9' },
     mode: mode || 'light',
   },
   typography: {
