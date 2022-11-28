@@ -4,7 +4,6 @@ import {
   Article,
   Group,
   Home,
-  ModeNight,
   Person,
   Settings,
   Storefront,
@@ -17,17 +16,23 @@ import {
   ListItemIcon,
   ListItemText,
   Switch,
+  useTheme,
 } from '@mui/material';
+import NightModeIcon from '@mui/icons-material/ModeNight';
+import LightModeIcon from '@mui/icons-material/LightMode';
+
 import { ColorContext } from '../contexts/ColorContext';
 
 function Sidebar() {
   const { toggleColorMode } = useContext(ColorContext);
+  const theme = useTheme();
+
   return (
     <Box flex={1} p={2} sx={{ display: { xs: 'none', sm: 'block' } }}>
       <Box position="fixed">
         <List>
           <ListItem disablePadding>
-            <ListItemButton component="a" href="#home">
+            <ListItemButton component="a" href="/">
               <ListItemIcon>
                 <Home />
               </ListItemIcon>
@@ -85,7 +90,7 @@ function Sidebar() {
           <ListItem disablePadding>
             <ListItemButton component="a" href="#simple-list">
               <ListItemIcon>
-                <ModeNight />
+                {theme.palette.mode === 'dark' ? <NightModeIcon /> : <LightModeIcon />}
               </ListItemIcon>
               <Switch onChange={toggleColorMode} />
             </ListItemButton>
