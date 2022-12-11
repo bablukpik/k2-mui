@@ -3,8 +3,8 @@ import {
   IconButton,
   useTheme,
 } from '@mui/material';
-import DarkIcon from '@mui/icons-material/Brightness4';
-import LightIcon from '@mui/icons-material/Brightness7';
+import DarkModeIcon from '@mui/icons-material/ModeNight';
+import LightModeIcon from '@mui/icons-material/LightMode';
 import { ColorContext } from '../contexts/ColorContext';
 
 export function SwitchModeButton() {
@@ -16,7 +16,7 @@ export function SwitchModeButton() {
       sx={{ ml: 1 }}
       onClick={toggleColorMode}
     >
-      {theme.palette.mode === 'dark' ? <LightIcon /> : <DarkIcon />}
+      {theme.palette.mode === 'dark' ? <DarkModeIcon /> : <LightModeIcon />}
     </IconButton>
   );
 }

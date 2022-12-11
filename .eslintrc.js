@@ -62,13 +62,13 @@ module.exports = {
       },
     ],
     "object-curly-newline": ["error", {
-      "ObjectExpression": { "multiline": true, "minProperties": 3 }, // object
+      // "ObjectExpression": { "multiline": true, "minProperties": 3 }, // object
       "ObjectPattern": { "multiline": true, "minProperties": 2 }, // object destructuring
       "ImportDeclaration": { "multiline": true, "minProperties": 2 },
       "ExportDeclaration": { "multiline": true, "minProperties": 3 }
     }],
     "array-element-newline": ["error", {
-      "ArrayExpression": { "multiline": true, "minItems": 3 }, // array
+      // "ArrayExpression": { "multiline": true, "minItems": 3 }, // array
       "ArrayPattern": { "multiline": true, "minItems": 3 }, // array destructuring
     }],
     'max-len': ['error', {
